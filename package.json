@@ -1,0 +1,25 @@
+{
+  "name": "mediadown",
+  "description": "Mediadown",
+  "author": "Maycon Benito",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "license": "MIT",
+  "build": {
+    "appId": "com.mayconbenito.mediadown",
+    "productName": "Mediadown"
+  },
+  "scripts": {
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "electron": "^6.0.3",
+    "electron-builder": "^21.2.0"
+  },
+  "dependencies": {
+    "ytdl-core": "^0.29.5"
+  }
+}
