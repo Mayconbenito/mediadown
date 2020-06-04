@@ -1,8 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   outline: none;
+}
+
+a:not([draggable="true"]),
+img:not([draggable="true"]) {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+a[href^="http://"],
+a[href^="https://"],
+a[href^="ftp://"]
+{
+  -webkit-user-drag: auto;
+  user-drag: auto;
+}
+
+body {
+  user-select: none;
 }
 
 .container {
@@ -27,7 +47,7 @@
   border-radius: 2px;
   border: 1px solid #666;
   margin-bottom: 3px;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto;
 }
 
 #options-select {
@@ -37,7 +57,7 @@
   border: 1px solid #666;
   cursor: pointer;
   margin-bottom: 3px;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto;
 }
 
 .buttons {
@@ -69,8 +89,10 @@
 
 .item {
   display: flex;
-  background-color: #ccc;
+  background-color: #fff;
   margin-bottom: 5px;
+  border: 1px solid #000;
+  border-radius: 2px;
 }
 
 .item-thumbnail {
@@ -83,14 +105,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 5px;
+  margin: 5px;
 }
 
 .item-title {
-  max-width: 180px;
+  max-width: 190px;
   font-size: 14px;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
+  font-family: Roboto;
+  font-weight: bold;
   white-space: nowrap;
   line-clamp: 1;
   text-overflow: ellipsis;
@@ -98,6 +120,7 @@
 }
 
 .item-progress-bar {
+  min-width: 190px;
   height: 15px;
 }
 
@@ -118,4 +141,22 @@
 .item-progress-bar::-webkit-progress-value {
   background-color: #c32020;
   border-radius: 3px;
+}
+
+.status-details {
+  margin-top: 2px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.item-status {
+  margin-right: 3px;
+}
+
+.item-type {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: auto;
 }
