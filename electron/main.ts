@@ -27,7 +27,8 @@ function createWindow () {
     transparent: false,
     webPreferences: {
       nodeIntegration: true
-    }
+    },
+    autoHideMenuBar: process.env.NODE_ENV !== 'development'
   })
 
   if (process.env.NODE_ENV === 'development') {
